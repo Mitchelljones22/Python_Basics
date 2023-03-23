@@ -18,7 +18,7 @@ def opening():
         balance = (b)
         x = 0
         while x < 1:
-            #The x variable is used to let the user make multiple actions until they choose quit we'er its increased to 1
+            #The x variable is used to let the user make multiple actions until they choose quit where it is increased to 1
             #The y variable allows the user to re-input an amount or cancel a transaction if the remaining balance is less than $100
             y = False
             userInput = input("Please select an option (Deposit)(Withdraw)(Check Balance)(Quit):\n")
@@ -33,7 +33,7 @@ def opening():
                         y = True
                     elif amount <= 0:
                         print("Deposit amount must be more than 0")
-    #This code check if the user wants to withdraw                     
+    #This code checks if the user wants to withdraw                     
             elif userInput == "withdraw":
                 while y == False:
                     amount = int(input("Enter amount to withdraw:"))
@@ -50,7 +50,7 @@ def opening():
                             y = True
                         else:
                             print("Transaction Canceled")
-    #The code checks the users balance if they inputed check balance                                        
+    #The code checks the users balance if user input is check balance                                        
                     elif amount > 0:
                         balance = atmWithdraw.withdraw(balance, amount)
                         y = True
@@ -61,7 +61,7 @@ def opening():
     #Code will check the users balance
             elif userInput == "check balance":
                 atmBalanceInquiry.Balance(balance)
-    #Code will prince balance as well as exit message before ending the code
+    #Code will print balance as well as an exit message before ending the code
             elif userInput == "quit":
                 atmQuit.Quit(balance)
                 x = x + 1
